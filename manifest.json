@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Baseball Card Creator",
+  "version": "1.0",
+  "description": "Create a baseball card from your photo library with additional information.",
+  "icons": {
+    "48": "images/icon48.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "images/icon48.png"
+  },
+  "permissions": ["storage"]
+}
