@@ -11,6 +11,10 @@ input[type="text"], input[type="file"], button {
   margin-top: 10px;
 }
 
+#cardContainer {
+    margin-top: 20px;
+}
+
 .baseball-card {
   border: 2px solid #000; /* Adding a border */
   padding: 10px;
