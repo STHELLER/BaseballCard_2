@@ -7,7 +7,7 @@
     "48": "images/icon48.png"
   },
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "index.html",
     "default_icon": "images/icon48.png"
   },
   "permissions": ["storage"]
