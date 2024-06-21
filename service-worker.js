@@ -4,7 +4,7 @@ self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('baseball-card-creator-v1').then(function(cache) {
       return cache.addAll([
-        '/popup.html',
+        '/index.html',
         '/styles.css',
         '/popup.js',
         '/images/icon48.png',
