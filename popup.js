@@ -33,6 +33,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Append card to container
             cardContainer.appendChild(card);
+
+            // Convert card to image and save
+            html2canvas(card, {
+                onrendered: function(canvas) {
+                    const link = document.createElement('a');
+                    link.href = canvas.toDataURL();
+                    link.download = 'baseball-card.png';
+                    link.click();
+                }
+            });
         };
 
         if (photo) {
