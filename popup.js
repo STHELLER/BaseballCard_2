@@ -54,5 +54,12 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             alert('Please select a photo');
         }
+        downloadButton.addEventListener('click', function() {
+        html2canvas(document.querySelector('.baseball-card')).then(canvas => {
+            const link = document.createElement('a');
+            link.href = canvas.toDataURL('image/png');
+            link.download = 'baseball_card.png';
+            link.click();
+        });
     });
 });
