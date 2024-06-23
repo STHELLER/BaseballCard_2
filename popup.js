@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     const createCardButton = document.getElementById('createCardButton');
-    const cardContainer = document.getElementById('cardContainer');
+    const cardContainer = document.getElementById('cardResult');
 
     createCardButton.addEventListener('click', function() {
-        const name = document.getElementById('name').text;
-        const photo = document.getElementById('photo').file[0];
+        const name = document.getElementById('personName').value;
+        const photo = document.getElementById('photoInput').files[0];
         const reader = new FileReader();
 
         reader.onload = function(event) {
@@ -42,5 +42,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
-
