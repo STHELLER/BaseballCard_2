@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Baseball Card</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="/images/icon48.png" type="image/x-icon">
+    <link rel="icon" href="/path/to/favicon.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
 </head>
 <body>
     <div>
@@ -16,6 +17,7 @@
         <input type="text" id="bio" placeholder="Enter bio">
         <input type="text" id="team" placeholder="Enter team">
         <button id="createCardButton">Create Card</button>
+        <button id="downloadButton" style="display:none;">Download Card</button>
     </div>
     <div id="cardContainer"></div>
     <script src="popup.js"></script>
