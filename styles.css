@@ -8,7 +8,7 @@ input, button {
     margin-bottom: 10px;
 }
 
-#cardResult {
+#cardContainer {
     margin-top: 20px;
 }
 
@@ -27,7 +27,7 @@ input, button {
 .card-image {
     position: absolute;
     top: 150px; /* Adjust based on where you want the photo */
-    left: 15px; /* Adjust based on where you want the photo */
+    left: 20px; /* Adjust based on where you want the photo */
     width: 300px; /* Adjust based on your template image size */
     height: 300px; /* Adjust based on your template image size */
     border-radius: 10px;
@@ -35,10 +35,56 @@ input, button {
 
 .card-text {
     position: absolute;
-    bottom: 50px; /* Adjust based on where you want the text */
-    left: 50px; /* Adjust based on where you want the text */
-    font-size: 24px;
+    bottom: 190px; /* Adjust based on where you want the text */
+    left: 20px; /* Adjust based on where you want the text */
+    font-size: 18px;
     font-weight: bold;
     color: #000; /* Adjust based on your template design */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0);
+}
+
+.card-field {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    word-wrap: break-word; /* Ensure text wraps within the container */
+    overflow-wrap: break-word; /* Alternative for more compatibility */
+}
+
+
+.name {
+    bottom: 190px;
+    left: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.time {
+    top: 62px;
+    left: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.location {
+    bottom: 160px;
+    left: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.bio {
+    top: 560px;
+    left: 10px;
+    max-width: 300px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.team {
+    top: 62px;
+    left: 405px;
+    
+    transform: translateX(-50%);
+    font-weight: bold;
 }
