@@ -39,6 +39,6 @@ input, button {
     left: 50px; /* Adjust based on where you want the text */
     font-size: 24px;
     font-weight: bold;
-    color: #fff; /* Adjust based on your template design */
+    color: #000; /* Adjust based on your template design */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
