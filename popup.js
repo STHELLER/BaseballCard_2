@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const cardContainer = document.getElementById('cardContainer');
 
     createCardButton.addEventListener('click', function() {
-        const name = document.getElementById('name').value;
-        const photo = document.getElementById('photo').files[0];
+        const name = document.getElementById('name').text;
+        const photo = document.getElementById('photo').file[0];
         const reader = new FileReader();
 
         reader.onload = function(event) {
