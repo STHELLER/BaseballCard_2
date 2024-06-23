@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baseball Card Creator</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="/images/icon48.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Baseball Card</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/images/icon48.png" type="image/x-icon">
 </head>
 <body>
-  <h1>Create Baseball Card</h1>
-  <input type="file" id="photoInput" accept="image/*">
-  <input type="text" id="personName" placeholder="Name of Person">
-  <button id="createCardButton">Create Card</button>
-  <div id="cardResult"></div>
-  <!-- Install button for PWA -->
-  <!-- <button id="installButton" style="display: none;">Install App</button> -->
-  <script src="popup.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
-
+    <div>
+        <input type="file" id="photo" accept="image/*">
+        <input type="text" id="name" placeholder="Enter name">
+        <input type="text" id="time" placeholder="Enter time">
+        <input type="text" id="location" placeholder="Enter location">
+        <input type="text" id="bio" placeholder="Enter bio">
+        <input type="text" id="team" placeholder="Enter team">
+        <button id="createCardButton">Create Card</button>
+    </div>
+    <div id="cardContainer"></div>
+    <script src="popup.js"></script>
 </body>
 </html>
