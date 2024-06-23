@@ -88,3 +88,7 @@ input, button {
     transform: translateX(-50%);
     font-weight: bold;
 }
+
+#downloadButton {
+    margin-top: 10px;
+}
