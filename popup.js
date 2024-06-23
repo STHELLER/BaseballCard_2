@@ -1,10 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     const createCardButton = document.getElementById('createCardButton');
-    const cardContainer = document.getElementById('cardResult');
+    const cardContainer = document.getElementById('cardContainer');
 
     createCardButton.addEventListener('click', function() {
-        const name = document.getElementById('personName').value;
-        const photo = document.getElementById('photoInput').files[0];
+        const name = document.getElementById('name').value;
+        const time = document.getElementById('time').value;
+        const location = document.getElementById('location').value;
+        const bio = document.getElementById('bio').value;
+        const team = document.getElementById('team').value;
+        const photo = document.getElementById('photo').files[0];
         const reader = new FileReader();
 
         reader.onload = function(event) {
@@ -22,14 +26,24 @@ document.addEventListener('DOMContentLoaded', function() {
             img.src = imageDataUrl;
             img.className = 'card-image';
 
-            // Create text element
-            const text = document.createElement('div');
-            text.className = 'card-text';
-            text.textContent = name;
+            // Create and append text elements
+            const fields = [
+                { class: 'name', text: name },
+                { class: 'time', text: time },
+                { class: 'location', text: location },
+                { class: 'bio', text: bio },
+                { class: 'team', text: team }
+            ];
+
+            fields.forEach(field => {
+                const textElement = document.createElement('div');
+                textElement.className = `card-field ${field.class}`;
+                textElement.textContent = field.text;
+                card.appendChild(textElement);
+            });
 
             // Append elements to card
             card.appendChild(img);
-            card.appendChild(text);
 
             // Append card to container
             cardContainer.appendChild(card);
