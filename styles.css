@@ -26,8 +26,8 @@ input, button {
 
 .card-image {
     position: absolute;
-    top: 100px; /* Adjust based on where you want the photo */
-    left: 50px; /* Adjust based on where you want the photo */
+    top: 150px; /* Adjust based on where you want the photo */
+    left: 15px; /* Adjust based on where you want the photo */
     width: 300px; /* Adjust based on your template image size */
     height: 300px; /* Adjust based on your template image size */
     border-radius: 10px;
