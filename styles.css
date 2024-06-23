@@ -1,46 +1,44 @@
 body {
-  font-family: Arial, sans-serif;
-  padding: 10px;
-  width: 300px;
-  height: 500px;
-  overflow-y: auto;
+    font-family: Arial, sans-serif;
+    margin: 20px;
 }
 
-input[type="text"], input[type="file"], button {
-  width: 100%;
-  margin-top: 10px;
+input, button {
+    display: block;
+    margin-bottom: 10px;
 }
 
-#cardContainer {
+#cardResult {
     margin-top: 20px;
 }
 
 .baseball-card {
-  border: 2px solid #000; /* Adding a border */
-  padding: 10px;
-  text-align: center;
-  margin-top: 10px;
+    position: relative;
+    width: 400px; /* Adjust based on your template image size */
+    height: 600px; /* Adjust based on your template image size */
+    background-image: url('images/template.png');
+    background-size: cover;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.baseball-card img {
-  width: 100%;
-  height: auto;
+.card-image {
+    position: absolute;
+    top: 100px; /* Adjust based on where you want the photo */
+    left: 50px; /* Adjust based on where you want the photo */
+    width: 300px; /* Adjust based on your template image size */
+    height: 300px; /* Adjust based on your template image size */
+    border-radius: 10px;
 }
 
-.baseball-card .info {
-  margin-top: 10px;
-}
-
-#installButton {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+.card-text {
+    position: absolute;
+    bottom: 50px; /* Adjust based on where you want the text */
+    left: 50px; /* Adjust based on where you want the text */
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff; /* Adjust based on your template design */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
