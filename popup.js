@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const name = document.getElementById('name').value;
         const time = document.getElementById('time').value;
         const location = document.getElementById('location').value;
-        const bio = document.getElementById('bio').value;
+        const bio = document.getElementById('bio').value.replace(/\n/g, '<br>');
         const team = document.getElementById('team').value;
-        const notes = document.getElementById('notes').value;
+        const notes = document.getElementById('notes').value.replace(/\n/g, '<br>');
         const photo = document.getElementById('photo').files[0];
         const reader = new FileReader();
 
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
             fields.forEach(field => {
                 const textElement = document.createElement('div');
                 textElement.className = `card-field ${field.class}`;
-                textElement.textContent = field.text;
+                textElement.innerHTML = field.text; // Use innerHTML to handle line breaks
                 card.appendChild(textElement);
             });
 
@@ -56,5 +56,14 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             alert('Please select a photo');
         }
+        downloadButton.addEventListener('click', function() {
+            html2canvas(document.querySelector('.baseball-card')).then(canvas => {
+                const link = document.createElement('a');
+                link.href = canvas.toDataURL('image/png');
+                link.download = 'baseball_card.png';
+                link.click();
+            });
+        });
     });
 });
+
