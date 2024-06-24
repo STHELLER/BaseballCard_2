@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Baseball Card</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/path/to/favicon.ico" type="image/x-icon">
+    <script src="html2canvas.min.js"></script>
+</head>
+<body style="background-image: url('images/background.png')">
+    <h1>Create Baseball Card</h1>
+    <div>
+        <input type="file" id="photo" accept="image/*">
+        <input type="text" id="team" placeholder="CAT Team">
+        <input type="text" id="name" placeholder="Name of Person/Org">
+        <input type="text" id="time" placeholder="Time of Engagement">
+        <input type="text" id="location" placeholder="Country of Origin">
+        <textarea type="text" id="bio" cols="40" rows="5" placeholder="Enter Bio"></textarea>
+        <!--<input type="text" id="bio" placeholder="Description">-->
+        <br>
+        <textarea type="text" id="notes" cols="40" rows="10" placeholder="Enter Notes on Engagement"></textarea>
+        <!--<input type="text" id="notes" cols="40" rows="40" placeholder="Enter Notes">-->
+        <button id="createCardButton">Create Card</button>
+        <button id="downloadButton">Download Card</button>
+    </div>
+    <div id="cardContainer"></div>
+    <script src="popup.js"></script>
+</body>
+</html>
