@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const createCardButton = document.getElementById('createCardButton');
+    const downloadButton = document.getElementById('downloadButton');
     const cardContainer = document.getElementById('cardContainer');
 
     createCardButton.addEventListener('click', function() {
@@ -34,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 { class: 'location', text: location },
                 { class: 'bio', text: bio },
                 { class: 'team', text: team },
-                { class: 'notes', text: notes}
+                { class: 'notes', text: notes }
             ];
 
             fields.forEach(field => {
@@ -49,6 +50,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Append card to container
             cardContainer.appendChild(card);
+
+            // Show download button
+            downloadButton.style.display = 'inline-block';
         };
 
         if (photo) {
@@ -56,14 +60,35 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             alert('Please select a photo');
         }
-        downloadButton.addEventListener('click', function() {
-            html2canvas(document.querySelector('.baseball-card')).then(canvas => {
-                const link = document.createElement('a');
-                link.href = canvas.toDataURL('image/png');
-                link.download = 'baseball_card.png';
-                link.click();
+    });
+
+    downloadButton.addEventListener('click', function() {
+        html2canvas(document.querySelector('.baseball-card')).then(canvas => {
+            const link = document.createElement('a');
+            link.href = canvas.toDataURL('image/png');
+            link.download = 'baseball_card.png';
+
+            // Create a blob and use FileReader to convert it to a DataURL
+            canvas.toBlob(blob => {
+                const url = URL.createObjectURL(blob);
+
+                // iOS Safari workaround
+                if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+                    const reader = new FileReader();
+                    reader.onloadend = function() {
+                        const image = new Image();
+                        image.src = reader.result;
+                        const w = window.open("");
+                        w.document.write(image.outerHTML);
+                    };
+                    reader.readAsDataURL(blob);
+                } else {
+                    link.href = url;
+                    link.download = 'baseball_card.png';
+                    link.click();
+                    URL.revokeObjectURL(url); // Clean up
+                }
             });
         });
     });
 });
-
