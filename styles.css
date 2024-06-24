@@ -45,7 +45,7 @@ input, button {
 
 .card-field {
     position: absolute;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 1);
     padding: 5px;
     word-wrap: break-word; /* Ensure text wraps within the container */
     overflow-wrap: break-word; /* Alternative for more compatibility */
@@ -76,6 +76,7 @@ input, button {
 .bio {
     top: 560px;
     left: 10px;
+    bottom: 10px;
     max-width: 300px;
     text-align: left;
     font-weight: bold;
@@ -86,5 +87,14 @@ input, button {
     left: 405px;
     
     transform: translateX(-50%);
+    font-weight: bold;
+}
+
+.notes {
+    top: 100px;
+    left: 350px;
+    right: 10px;
+    bottom: 10px;
+    text-align: left;
     font-weight: bold;
 }

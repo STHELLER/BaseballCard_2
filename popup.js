@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const location = document.getElementById('location').value;
         const bio = document.getElementById('bio').value;
         const team = document.getElementById('team').value;
+        const notes = document.getElementById('notes').value;
         const photo = document.getElementById('photo').files[0];
         const reader = new FileReader();
 
@@ -32,7 +33,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 { class: 'time', text: time },
                 { class: 'location', text: location },
                 { class: 'bio', text: bio },
-                { class: 'team', text: team }
+                { class: 'team', text: team },
+                { class: 'notes', text: notes}
             ];
 
             fields.forEach(field => {
