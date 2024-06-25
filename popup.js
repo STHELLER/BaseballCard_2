@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const createCardButton = document.getElementById('createCardButton');
     const downloadButton = document.getElementById('downloadButton');
+    const ngaMaps = document.getElementById('ngaMaps');
     const cardContainer = document.getElementById('cardContainer');
 
     createCardButton.addEventListener('click', function() {
@@ -53,6 +54,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Show download button
             downloadButton.style.display = 'inline-block';
+            
+            // Show Link to NGA button
+            ngaMaps.style.display = 'inline-block';
         };
 
         if (photo) {
@@ -90,5 +94,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
+    });
+
+    ngaMaps.addEventListener('click', function() {
+        window.open('https://map.nga.mil', '_blank'); // Replace with the desired URL
     });
 });

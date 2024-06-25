@@ -9,16 +9,14 @@
     <script src="html2canvas.min.js"></script>
 </head>
 <body style="background-image: url('images/background.png')">
-    <h1>Create Baseball Card</h1>
+    <h1 style="color:blanchedalmond">Create Baseball Card</h1>
     <div>
-        <input type="file" id="photo" accept="image/*">
+        <input type="file" id="photo" accept="image/*" style="color: blanchedalmond;">
         <input type="text" id="team" placeholder="CAT Team">
         <input type="text" id="name" placeholder="Name of Person/Org">
+        <textarea type="text" id="bio" cols="40" rows="5" placeholder="Enter Bio"></textarea>
         <input type="text" id="time" placeholder="Time of Engagement">
         <input type="text" id="location" placeholder="MGRS Location">
-        <textarea type="text" id="bio" cols="40" rows="5" placeholder="Enter Bio"></textarea>
-        <br>
-
         
         <textarea type="text" id="notes" cols="40" rows="10" style="text-align: left;" placeholder="Enter Notes on Engagement">
 Civil Engagement:
@@ -34,7 +32,8 @@ Past Engagement Summary:</textarea>
 
         
         <button id="createCardButton">Create Card</button>
-        <button id="downloadButton">Download Card</button>
+        <button id="downloadButton" stlye="display: none;">Download Card</button>
+        <button id="ngaMaps" stlye="display: none;">Link to Map Service</button>
     </div>
     <div id="cardContainer"></div>
     <script src="popup.js"></script>
